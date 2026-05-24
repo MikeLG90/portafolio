@@ -310,6 +310,9 @@
 }
 
 .contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--neon-cyan);
   text-decoration: none;
   transition: all 0.3s ease;
@@ -341,18 +344,60 @@
 }
 
 .contact-divider {
+  
   color: var(--neon-pink);
   opacity: 0.5;
 }
 
 .location {
   color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .icon {
   margin-right: 0.3rem;
 }
 
+/* =========================================
+   ESTILOS PARA ÍCONOS LUCIDE NEÓN
+   ========================================= */
+
+/* Clase base para todos los íconos Lucide en el proyecto */
+.lucide {
+  /* Suaviza los bordes del SVG */
+  shape-rendering: geometricPrecision; 
+}
+
+/* Variación Cian (Brillo Azul) */
+.icon-neon-cyan {
+  color: var(--neon-cyan);
+  /* El drop-shadow crea el efecto de neón real alrededor del ícono */
+  filter: drop-shadow(0 0 2px var(--neon-cyan)) drop-shadow(0 0 5px var(--neon-cyan));
+}
+
+/* Variación Rosa (Brillo Rosa) */
+.icon-neon-pink {
+  color: var(--neon-pink);
+  filter: drop-shadow(0 0 2px var(--neon-pink)) drop-shadow(0 0 5px var(--neon-pink));
+}
+
+/* Variación Amarilla (Brillo Amarillo) */
+.icon-neon-yellow {
+  color: var(--neon-yellow);
+  filter: drop-shadow(0 0 2px var(--neon-yellow)) drop-shadow(0 0 5px var(--neon-yellow));
+}
+
+/* Opcional: Una animación de pulso sutil para íconos destacados */
+.icon-pulse {
+  animation: iconPulse 2s infinite alternate;
+}
+
+@keyframes iconPulse {
+  0% { opacity: 0.7; filter: drop-shadow(0 0 2px currentColor); }
+  100% { opacity: 1; filter: drop-shadow(0 0 5px currentColor) drop-shadow(0 0 10px currentColor); }
+}
 /* =========================================
    MAIN CONTENT
    ========================================= */
@@ -790,6 +835,10 @@
   background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink), var(--neon-purple));
   animation: gradientMove 3s linear infinite;
   background-size: 200% 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skill-card:hover {
@@ -800,10 +849,12 @@
 }
 
 .skill-icon {
-  font-size: 2.5rem;
+  width: 100%; /* Obliga al ícono a abarcar todo el ancho */
   margin-bottom: 1rem;
-  display: block;
-  animation: float 3s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatIcon 3s ease-in-out infinite; 
 }
 
 .skill-card h3 {
@@ -917,6 +968,9 @@
   font-size: 2.5rem;
   margin-bottom: 1rem;
   display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .education-card h3 {
