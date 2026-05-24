@@ -380,7 +380,7 @@ return (
    <footer className="retro-footer" data-testid="footer">
       <div className="footer-content">
          <div className="footer-text">
-            <span className="footer-year">© 2025</span>
+            <span className="footer-year">© 2026</span>
             <span className="footer-name">MIGUEL ALFONSO LÓPEZ GÓMEZ</span>
          </div>
          <div className="footer-tagline">
